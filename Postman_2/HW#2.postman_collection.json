@@ -1015,7 +1015,7 @@
 						"exec": [
 							"let jsonData = pm.response.json();\r",
 							"\r",
-							"for (var i = 200; i < 230; i++) {\r",
+							"for (var i = 0; i < jsonData.length; i++) {\r",
 							"  \r",
 							"    let currRequest = { \r",
 							"        url: \"http://162.55.220.72:5005/curr_byn\", \r",
@@ -1036,7 +1036,7 @@
 							"    if (res.code == 500){\r",
 							"        \r",
 							"    }\r",
-							"    else if (res.code == 200 ){\r",
+							"    else if (res.code == 200 && res.json().Cur_ID == true ){\r",
 							"                \r",
 							"        console.log(res.json());            \r",
 							"    };\r",
